@@ -18,10 +18,11 @@ import com.mygame.OsonFactory;
 public class Osonapp extends GameApplication{
 
 	public static final int TILE_SIZE = 20;
+	public static final int SCREEN_WIDTH = 1600;
+	public static final int SCREEN_HEIGHT = 1000;
+	
 	private Entity player;
-	private enum Type {
-        PLAYER, ENEMY
-    }
+	
 	private PlayerComponent playerComponent;
 	
 	public static void main(String[] args) {
@@ -30,25 +31,21 @@ public class Osonapp extends GameApplication{
 	}
 	
 	protected void initSettings(GameSettings gameSettings) {
-	    gameSettings.setWidth(600);
-	    gameSettings.setHeight(600);
+	    gameSettings.setWidth(SCREEN_WIDTH);
+	    gameSettings.setHeight(SCREEN_HEIGHT);
 	    gameSettings.setTitle("Oson Game");
 	    gameSettings.setVersion("0.1");
 	}
 
 	@Override
 	protected void initGame() {
-	    /*
-		player = FXGL.entityBuilder()
-	    		.type(Type.PLAYER)
-	            .at(300, 300).view(new Rectangle(25,25, Color.BLUEVIOLET))
-	            .buildAndAttach();
-	    */
+	  
 		
 	    getGameWorld().addEntityFactory(new OsonFactory());
 	    getGameWorld().spawn("BG");
 	    player = getGameWorld().spawn("Player");
 	    playerComponent = player.getComponent(PlayerComponent.class);
+	    
 	    
 	}
 	

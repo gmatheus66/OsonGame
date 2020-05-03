@@ -20,7 +20,8 @@ public class OsonFactory implements EntityFactory{
 		return FXGL.entityBuilder()
 				.type(OsonType.PLAYER)
 				.from(data)
-				.viewWithBBox(new Rectangle(Osonapp.TILE_SIZE, Osonapp.TILE_SIZE, Color.BLUE))
+				//.viewWithBBox(new Rectangle(Osonapp.TILE_SIZE, Osonapp.TILE_SIZE, Color.BLUE))
+				.viewWithBBox(FXGL.getAssetLoader().loadTexture("player_down_1.png"))
 				.with(new PlayerComponent())
 				.build();
 	}
@@ -29,7 +30,7 @@ public class OsonFactory implements EntityFactory{
 	public Entity newBackground(SpawnData data) {
 		return FXGL.entityBuilder()
 				.at(0,0)
-				.view(new Rectangle(600, 600, Color.LIGHTGREEN))
+				.view(new Rectangle(Osonapp.SCREEN_WIDTH, Osonapp.SCREEN_HEIGHT, Color.LIGHTGREEN))
 				.zIndex(-1)
 				.build();
 	}
