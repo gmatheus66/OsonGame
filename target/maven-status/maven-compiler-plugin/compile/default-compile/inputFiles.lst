@@ -1,1 +1,5 @@
-/home/gmatheus/eclipse-workspace/OsonGame/src/main/java/mygame/OsonGame.java
+/home/gmatheus/eclipse-workspace/OsonGame/src/main/java/com/mygame/OsonFactory.java
+/home/gmatheus/eclipse-workspace/OsonGame/src/main/java/com/mygame/Osonapp.java
+/home/gmatheus/eclipse-workspace/OsonGame/src/main/java/com/components/PlayerComponent.java
+/home/gmatheus/eclipse-workspace/OsonGame/src/main/java/com/mygame/OsonType.java
+/home/gmatheus/eclipse-workspace/OsonGame/src/main/java/com/components/MoveDirection.java
